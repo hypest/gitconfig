@@ -1,0 +1,40 @@
+[user]
+	name = Stefanos Togkoulidis
+	email = stefanostogoulidis@gmail.com
+
+[diff]
+	prompt = false
+	tool = diffmerge
+[difftool]
+	prompt = false
+[difftool "diffmerge"]
+  cmd = diffmerge $LOCAL $REMOTE
+
+[merge]
+	prompt = false
+  tool = diffmergetool
+	#tool = meld
+[mergetool]
+	prompt = false
+[mergetool "diffmergetool"]
+	prompt = false
+  cmd = diffmerge $BASE $MERGED $REMOTE
+  trustExitCode = false
+
+[difftool "vdiff"]
+	prompt = false
+	cmd = /Users/hypest/vdiff.sh $LOCAL $REMOTE
+[alias]
+  d = difftool
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	s = status
+	b = branch
+	co = checkout
+	f = flow
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[push]
+	default = matching
