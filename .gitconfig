@@ -8,24 +8,24 @@
 [difftool]
 	prompt = false
 [difftool "diffmerge"]
-  cmd = diffmerge $LOCAL $REMOTE
+	cmd = diffmerge $LOCAL $REMOTE
 
 [merge]
 	prompt = false
-  tool = diffmergetool
+	tool = diffmergetool
 	#tool = meld
 [mergetool]
 	prompt = false
 [mergetool "diffmergetool"]
 	prompt = false
-  cmd = diffmerge $BASE $MERGED $REMOTE
-  trustExitCode = false
+	cmd = diffmerge $BASE $MERGED $REMOTE
+	trustExitCode = false
 
 [difftool "vdiff"]
 	prompt = false
 	cmd = /Users/hypest/vdiff.sh $LOCAL $REMOTE
 [alias]
-  d = difftool
+	d = difftool
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	s = status
 	b = branch
