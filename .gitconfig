@@ -31,6 +31,7 @@
 	b = branch
 	co = checkout
 	f = flow
+	bl = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
 [color]
 	branch = auto
 	diff = auto
